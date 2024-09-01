@@ -1,0 +1,15 @@
+{
+  "name": "com.jasonskillman.asyncaddressablesmanager",
+  "displayName": "Async Addressables Manager",
+  "version": "1.0.0",
+  "description": "Asynchronously load multiple scenes using Unity's Addressables system.",
+  "author": {
+    "name": "Jason Skillman",
+    "email": "jason_skillman@outlook.com",
+    "url": "https://github.com/Jason-Skillman"
+  },
+  "dependencies": {
+	"com.cysharp.unitask": "2.5.5",
+  "com.jasonskillman.scenereference": "1.0.0"
+  }
+}
