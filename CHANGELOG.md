@@ -1,5 +1,8 @@
 # Unity Async Addressables Manager Changelog
 
+## [1.1.2] - 2026/07/26
+- Support for Unity 6.5
+
 ## [1.1.0] - 2026/01/10
 - Add support for assets.
 

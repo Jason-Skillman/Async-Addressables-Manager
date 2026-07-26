@@ -13,7 +13,7 @@ namespace JasonSkillman.AsyncAddressablesManager
 	public static partial class AddressablesManager
 	{
 		/// <summary>Stores the loaded scenes by the runtime key.</summary>
-		private static Dictionary<int, AsyncOperationHandle<SceneInstance>> loadedScenes = new Dictionary<int, AsyncOperationHandle<SceneInstance>>(); //Handle, AsyncOperationHandle<SceneInstance>
+		private static Dictionary<ulong, AsyncOperationHandle<SceneInstance>> loadedScenes = new Dictionary<ulong, AsyncOperationHandle<SceneInstance>>(); //Handle, AsyncOperationHandle<SceneInstance>
 
 		public static void SetActiveScene(string activeScene)
 		{
@@ -65,7 +65,7 @@ namespace JasonSkillman.AsyncAddressablesManager
 				{
 					AsyncOperationHandle<SceneInstance> asyncHandle = Addressables.LoadSceneAsync(scenes[sceneIndex], LoadSceneMode.Additive);
 					SceneInstance sceneInstance = await asyncHandle.ToUniTask();
-					int handle = sceneInstance.Scene.handle;
+					ulong handle = sceneInstance.Scene.handle.GetRawData();
 
 					//Cache all scenes loaded through Addressables. This is so the scene can be unloaded with Addressables.
 					loadedScenes.Add(handle, asyncHandle);
@@ -143,7 +143,7 @@ namespace JasonSkillman.AsyncAddressablesManager
 					}
 
 					SceneInstance sceneInstance = await Addressables.UnloadSceneAsync(asyncHandle).ToUniTask();
-					int handle = sceneInstance.Scene.handle;
+					ulong handle = sceneInstance.Scene.handle.GetRawData();
 
 					//Remove the scene from the loaded scenes cache
 					loadedScenes.Remove(handle);
