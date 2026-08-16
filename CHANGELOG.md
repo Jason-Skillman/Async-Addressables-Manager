@@ -1,4 +1,7 @@
-# Unity Async Addressables Manager Changelog
+# Async Addressables Manager Changelog
+
+## [1.1.3] - 2026/08/16
+- Create asset reference counter and editor viewer.
 
 ## [1.1.2] - 2026/07/26
 - Support for Unity 6.5
