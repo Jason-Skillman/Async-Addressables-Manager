@@ -1,0 +1,18 @@
+{
+    "name": "JasonSkillman.AsyncAddressablesManager.Editor",
+    "rootNamespace": "JasonSkillman.AsyncAddressablesManager.Editor",
+    "references": [
+        "GUID:92c1a3a7b02d11540a5c1f57fc2ce6df"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

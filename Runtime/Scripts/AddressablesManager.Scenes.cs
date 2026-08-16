@@ -12,7 +12,6 @@ namespace JasonSkillman.AsyncAddressablesManager
 {
 	public static partial class AddressablesManager
 	{
-		/// <summary>Stores the loaded scenes by the runtime key.</summary>
 		private static Dictionary<ulong, AsyncOperationHandle<SceneInstance>> loadedScenes = new Dictionary<ulong, AsyncOperationHandle<SceneInstance>>(); //Handle, AsyncOperationHandle<SceneInstance>
 
 		public static void SetActiveScene(string activeScene)
